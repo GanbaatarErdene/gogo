@@ -1,4 +1,4 @@
-import React from 'react' 
+import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -22,7 +22,7 @@ export default function Home() {
         </div>
 
         <main className="flex w-full flex-1 flex-row items-center justify-around py-2 text-center">
-          <Link href="/medee">
+          <Link href="/register">
             <div className="text-lg border border-gray-300 px-10 py-2 bg-gray-100 rounded-lg cursor-pointer">
               Мэдээ Нийтлэгч
             </div>
@@ -32,10 +32,10 @@ export default function Home() {
           <a className="text-3xl text-cyan-300">Сонголтоо хийгээрэй</a>
           {/* </Link> */}
 
-          <Link  href="/unshigch">
-          <div className="text-lg border border-gray-300 px-10 py-2 bg-gray-100 rounded-lg cursor-pointer">
-            Уншигч
-          </div>
+          <Link href="/unshigch">
+            <div className="text-lg border border-gray-300 px-10 py-2 bg-gray-100 rounded-lg cursor-pointer">
+              Уншигч
+            </div>
           </Link>
         </main>
 

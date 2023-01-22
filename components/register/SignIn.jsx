@@ -1,10 +1,36 @@
+import { useForm} from "react-hook-form";
+import { useRouter } from "next/router";
+const SignIn = () => {
+    const {
+        register,
+        handleSubmit,
+        reset,
+        setValue,
+        control,
+        formState: { errors },
+      } = useForm();
+    const router = useRouter();
 
-const UnshSignIn = () => {
+    const onSubmit = (formData) => {
+        console.log(formData);
+    }
+
+    const onError = (err) => {
+        console.log(err);
+    }
     return (
-        <div className="h-screen w-screen flex flex-col justify-center items-center bg-teal-200">
-            <div className="bg-white p-6 w-96">
-                <from >
-                    <h3 className="text-2xl font-semibold text-center mb-6">User Sign In</h3>
+        <div>
+                <form onSubmit={handleSubmit(onSubmit, onError)}>
+                    <h3 className="text-2xl font-semibold text-center mb-6">Sign In</h3>
+
+                    <div className="flex flex-col mb-4">
+                        <label className="mb-2" htmlFor="">First Name</label>
+                        <input
+                            type="text"
+                            className="border rounded p-1"
+                            placeholder="First Name"
+                        />
+                    </div>
                     
                     <div className="flex flex-col mb-4">
                         <label className="mb-2" htmlFor="">Email address</label>
@@ -40,18 +66,14 @@ const UnshSignIn = () => {
                         </button>
                     </div>
 
-                    <p className="forgot-password text-center p-3">
-                    to register <a className="text-blue-500" href="">sign up?</a>
-                    </p>
 
-                    {/* <p className="forgot-password text-right">
-                    <a href="">Sign Up</a>
-                </p> */}
+                        {/* <p className="forgot-password text-right">
+                        <a href="">Sign Up</a>
+                    </p> */}
 
-                </from>
+                </form>
             </div>
-        </div>
     );
 };
 
-export default UnshSignIn;
+export default SignIn;
