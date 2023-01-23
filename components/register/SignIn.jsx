@@ -61,7 +61,7 @@ const SignIn = () => {
                     </div>
 
                     <div className="d-grid">
-                        <button type="submit" className="bg-blue-500 hover:bg-blue-600 w-full py-2 rounded-sm text-white">
+                        <button type="submit" className="bg-teal-600 hover:bg-teal-700 w-full py-2 rounded-sm text-white">
                             Sign In
                         </button>
                     </div>
